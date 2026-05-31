@@ -15,6 +15,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	```astro
 <main>
 	<section class="hero">
+<img src="/rooted-fire-logo.png" alt="Rooted Fire Atelier logo" class="hero-logo" />
 		<p class="eyebrow">Rooted Fire Atelier</p>
 		<h1>From Story to Garment</h1>
 		<p class="hero-copy">
@@ -141,7 +142,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		padding: 5rem 0;
 		border-bottom: 1px solid rgba(180, 32, 45, 0.35);
 	}
-
+.hero-logo {
+	width: min(420px, 82vw);
+	height: auto;
+	margin-bottom: 2rem;
+	display: block;
+}
 	.eyebrow {
 		margin: 0 0 1rem;
 		text-transform: uppercase;
