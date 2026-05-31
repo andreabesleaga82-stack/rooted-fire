@@ -1,274 +1,283 @@
 ---
-
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----------------------------------------------------------
+---
 
 <!doctype html>
-
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+	```astro
+<main>
+	<section class="hero">
+		<p class="eyebrow">Rooted Fire Atelier</p>
+		<h1>From Story to Garment</h1>
+		<p class="hero-copy">
+			A dark romantic fashion concept born from <em>The Road Still Leads to You</em> —
+			where love, legacy, leather, lace, chrome, and hidden fire become wearable design.
+		</p>
+		<div class="hero-actions">
+			<a href="#capsule">Explore the First Capsule</a>
+			<a href="#contact" class="secondary">Collaboration Inquiry</a>
+		</div>
+	</section>
 
-```
-	<style>
-		:global(body) {
-			margin: 0;
-			background: #080706;
-			color: #f4eadf;
-		}
+	<section class="intro">
+		<p>
+			Rooted Fire Atelier is a story-born fashion portfolio: a bridge between fiction
+			and real-world garment development. Each piece begins inside the world of Andy
+			Ryder and Jax Ryder, then becomes a visual prototype shaped by road-born romance,
+			bayou dusk, feminine armor, and couture-level emotion.
+		</p>
+	</section>
 
+	<section id="capsule" class="section">
+		<p class="eyebrow">The First Capsule</p>
+		<h2>Dark romantic prototypes with a road-born soul.</h2>
+
+		<div class="grid">
+			<article>
+				<h3>The Rooted Fire Jacket</h3>
+				<p>
+					A signature women’s black bio-leather riding jacket with a defined waist,
+					structured shoulders, gunmetal hardware, subtle root-and-road embroidery,
+					and deep crimson satin lining.
+				</p>
+			</article>
+
+			<article>
+				<h3>The Heirloom Vest</h3>
+				<p>
+					A tailored black waistcoat inspired by feminine inheritance and biker-luxury
+					discipline — legacy without club patches, rank markings, or costume.
+				</p>
+			</article>
+
+			<article>
+				<h3>The Roadfire Dress</h3>
+				<p>
+					A black evening gown with a leather-inspired bodice, lace and illusion details,
+					a defined waist, and deep crimson revealed through movement.
+				</p>
+			</article>
+
+			<article>
+				<h3>The Black Gift Dress</h3>
+				<p>
+					A short sculpted black evening dress with lace or illusion sleeves — intimate,
+					personal, and made for private fire.
+				</p>
+			</article>
+
+			<article>
+				<h3>The White Leather Wedding Dress</h3>
+				<p>
+					The crown piece of the collection: an ivory-white leather bridal concept with
+					a sculpted corset bodice, crimson vine detail, silver or gunmetal accents,
+					and a hidden fire beneath the softness.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="section story">
+		<p class="eyebrow">Design Origins</p>
+		<h2>Born inside a love story. Developed as fashion.</h2>
+		<p>
+			The designs began in the emotional world of <em>The Road Still Leads to You</em>,
+			a biker-family romance centered on Andy Ryder, a Chicago-born designer, and Jax
+			Ryder, a rugged biker-mechanic whose life is built from engines, scars, devotion,
+			and the road back home.
+		</p>
+		<p>
+			Rooted Fire does not treat story as decoration. The garments carry origin, memory,
+			and character — translated into silhouette, lining, hardware, texture, and detail.
+		</p>
+	</section>
+
+	<section class="section prototype">
+		<p class="eyebrow">Prototype Development</p>
+		<h2>A portfolio today. A possible garment line tomorrow.</h2>
+		<p>
+			Rooted Fire Atelier is currently developing visual prototype packages for its first
+			capsule. The project is open to conversations with makers, ateliers, pattern cutters,
+			collaborators, and creative partners interested in helping story-born fashion become
+			tangible.
+		</p>
+	</section>
+
+	<section id="contact" class="section contact">
+		<p class="eyebrow">Contact</p>
+		<h2>Collaboration inquiries are welcome.</h2>
+		<p>
+			For atelier, prototype, editorial, or collaboration inquiries, please contact:
+		</p>
+		<a href="mailto:scholleandy@gmail.com">scholleandy@gmail.com</a>
+	</section>
+</main>
+
+<style>
+	:global(body) {
+		background: #080706;
+		color: #f4eadf;
+	}
+
+	main {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 0 1.5rem 4rem;
+	}
+
+	.hero {
+		min-height: 78vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 5rem 0;
+		border-bottom: 1px solid rgba(180, 32, 45, 0.35);
+	}
+
+	.eyebrow {
+		margin: 0 0 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.22em;
+		font-size: 0.78rem;
+		color: #b4202d;
+		font-weight: 700;
+	}
+
+	h1 {
+		max-width: 900px;
+		margin: 0;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: clamp(3.5rem, 10vw, 8.5rem);
+		line-height: 0.9;
+		letter-spacing: -0.06em;
+		color: #fff7ed;
+	}
+
+	h2 {
+		max-width: 760px;
+		margin: 0 0 1.5rem;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: clamp(2rem, 5vw, 4.25rem);
+		line-height: 1;
+		letter-spacing: -0.04em;
+		color: #fff7ed;
+	}
+
+	h3 {
+		margin: 0 0 0.75rem;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: 1.45rem;
+		color: #fff7ed;
+	}
+
+	p {
+		color: #d8c8bb;
+		font-size: 1.05rem;
+		line-height: 1.75;
+	}
+
+	.hero-copy {
+		max-width: 720px;
+		margin-top: 1.5rem;
+		font-size: clamp(1.15rem, 2vw, 1.45rem);
+		color: #eaded2;
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.hero-actions a,
+	.contact a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.9rem 1.15rem;
+		border: 1px solid #b4202d;
+		border-radius: 999px;
+		background: #b4202d;
+		color: #fff7ed;
+		text-decoration: none;
+		font-weight: 700;
+	}
+
+	.hero-actions a.secondary {
+		background: transparent;
+		color: #f4eadf;
+		border-color: rgba(244, 234, 223, 0.35);
+	}
+
+	.intro {
+		max-width: 860px;
+		padding: 4rem 0 2rem;
+	}
+
+	.intro p {
+		font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+		line-height: 1.55;
+		color: #f0e3d7;
+	}
+
+	.section {
+		padding: 4rem 0;
+		border-top: 1px solid rgba(244, 234, 223, 0.12);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	article {
+		padding: 1.35rem;
+		border: 1px solid rgba(244, 234, 223, 0.14);
+		border-radius: 1.25rem;
+		background:
+			linear-gradient(135deg, rgba(180, 32, 45, 0.12), rgba(255, 255, 255, 0.03)),
+			#11100f;
+		box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+	}
+
+	article p {
+		margin-bottom: 0;
+	}
+
+	.story,
+	.prototype,
+	.contact {
+		max-width: 860px;
+	}
+
+	.contact a {
+		margin-top: 0.5rem;
+	}
+
+	@media (max-width: 700px) {
 		main {
-			max-width: 1180px;
-			margin: 0 auto;
-			padding: 0 1.5rem 4rem;
+			padding-inline: 1rem;
 		}
 
 		.hero {
-			min-height: 82vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			padding: 5rem 0;
-			border-bottom: 1px solid rgba(180, 32, 45, 0.35);
-		}
-
-		.hero-logo {
-			width: min(420px, 82vw);
-			height: auto;
-			margin-bottom: 2rem;
-			display: block;
-		}
-
-		.eyebrow {
-			margin: 0 0 1rem;
-			text-transform: uppercase;
-			letter-spacing: 0.22em;
-			font-size: 0.78rem;
-			color: #c73a45;
-			font-weight: 700;
-		}
-
-		h1 {
-			max-width: 900px;
-			margin: 0;
-			font-family: Georgia, 'Times New Roman', serif;
-			font-size: clamp(3.5rem, 10vw, 8rem);
-			line-height: 0.9;
-			letter-spacing: -0.06em;
-			color: #fff7ed;
-		}
-
-		h2 {
-			max-width: 760px;
-			margin: 0 0 1.5rem;
-			font-family: Georgia, 'Times New Roman', serif;
-			font-size: clamp(2rem, 5vw, 4rem);
-			line-height: 1;
-			color: #fff7ed;
-		}
-
-		h3 {
-			margin: 0 0 0.75rem;
-			font-family: Georgia, 'Times New Roman', serif;
-			font-size: 1.45rem;
-			color: #fff7ed;
-		}
-
-		p {
-			color: #d8c8bb;
-			font-size: 1.05rem;
-			line-height: 1.75;
-		}
-
-		.hero-copy {
-			max-width: 720px;
-			margin-top: 1.5rem;
-			font-size: clamp(1.15rem, 2vw, 1.45rem);
-			color: #eaded2;
-		}
-
-		.hero-actions {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 1rem;
-			margin-top: 2rem;
-		}
-
-		.hero-actions a {
-			display: inline-flex;
-			padding: 0.9rem 1.15rem;
-			border: 1px solid #b4202d;
-			border-radius: 999px;
-			background: #b4202d;
-			color: #fff7ed;
-			text-decoration: none;
-			font-weight: 700;
-		}
-
-		.hero-actions a.secondary {
-			background: transparent;
-			border-color: rgba(244, 234, 223, 0.35);
-		}
-
-		.intro {
-			max-width: 860px;
-			padding: 4rem 0 2rem;
-		}
-
-		.intro p {
-			font-size: clamp(1.25rem, 2.5vw, 1.8rem);
-			line-height: 1.55;
-			color: #f0e3d7;
-		}
-
-		.section {
+			min-height: auto;
 			padding: 4rem 0;
-			border-top: 1px solid rgba(244, 234, 223, 0.12);
 		}
-
-		.grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-			gap: 1rem;
-			margin-top: 2rem;
-		}
-
-		article {
-			padding: 1.35rem;
-			border: 1px solid rgba(244, 234, 223, 0.14);
-			border-radius: 1.25rem;
-			background: #11100f;
-		}
-
-		.story,
-		.prototype,
-		.contact {
-			max-width: 860px;
-		}
-
-		.coming-soon {
-			display: inline-flex;
-			margin-top: 0.5rem;
-			padding: 0.85rem 1.1rem;
-			border: 1px solid rgba(244, 234, 223, 0.22);
-			border-radius: 999px;
-			color: #fff7ed;
-			background: rgba(255, 255, 255, 0.04);
-			font-weight: 700;
-		}
-	</style>
-</head>
-
-<body>
-	<Header />
-
-	<main>
-		<section class="hero">
-			<img src="/rooted-fire-logo.png" alt="Rooted Fire Atelier logo" class="hero-logo" />
-
-			<p class="eyebrow">A story-born fashion atelier</p>
-
-			<h1>From Story to Garment</h1>
-
-			<p class="hero-copy">
-				A dark romantic fashion concept born from <em>The Road Still Leads to You</em> —
-				where love, legacy, leather, lace, chrome, and hidden fire become wearable design.
-			</p>
-
-			<div class="hero-actions">
-				<a href="#capsule">Explore the First Capsule</a>
-				<a href="#contact" class="secondary">Collaboration Inquiry</a>
-			</div>
-		</section>
-
-		<section class="intro">
-			<p>
-				Rooted Fire Atelier is a story-born fashion portfolio: a bridge between fiction
-				and real-world garment development. Each piece begins inside the world of Andy
-				Ryder and Jax Ryder, then becomes a visual prototype shaped by road-born romance,
-				bayou dusk, feminine armor, and couture-level emotion.
-			</p>
-		</section>
-
-		<section id="capsule" class="section">
-			<p class="eyebrow">The First Capsule</p>
-
-			<h2>Dark romantic prototypes with a road-born soul.</h2>
-
-			<div class="grid">
-				<article>
-					<h3>The Rooted Fire Jacket</h3>
-					<p>A signature women’s black bio-leather riding jacket with a defined waist, structured shoulders, gunmetal hardware, subtle root-and-road embroidery, and deep crimson satin lining.</p>
-				</article>
-
-				<article>
-					<h3>The Heirloom Vest</h3>
-					<p>A tailored black waistcoat inspired by feminine inheritance and biker-luxury discipline — legacy without club patches, rank markings, or costume.</p>
-				</article>
-
-				<article>
-					<h3>The Roadfire Dress</h3>
-					<p>A black evening gown with a leather-inspired bodice, lace and illusion details, a defined waist, and deep crimson revealed through movement.</p>
-				</article>
-
-				<article>
-					<h3>The Black Gift Dress</h3>
-					<p>A short sculpted black evening dress with lace or illusion sleeves — intimate, personal, and made for private fire.</p>
-				</article>
-
-				<article>
-					<h3>The White Leather Wedding Dress</h3>
-					<p>The crown piece of the collection: an ivory-white leather bridal concept with a sculpted corset bodice, crimson vine detail, silver or gunmetal accents, and a hidden fire beneath the softness.</p>
-				</article>
-			</div>
-		</section>
-
-		<section class="section story">
-			<p class="eyebrow">Design Origins</p>
-
-			<h2>Born inside a love story. Developed as fashion.</h2>
-
-			<p>
-				The designs began in the emotional world of <em>The Road Still Leads to You</em>,
-				a biker-family romance centered on Andy Ryder, a Chicago-born designer, and Jax
-				Ryder, a rugged biker-mechanic whose life is built from engines, scars, devotion,
-				and the road back home.
-			</p>
-
-			<p>
-				Rooted Fire does not treat story as decoration. The garments carry origin, memory,
-				and character — translated into silhouette, lining, hardware, texture, and detail.
-			</p>
-		</section>
-
-		<section class="section prototype">
-			<p class="eyebrow">Prototype Development</p>
-
-			<h2>A portfolio today. A possible garment line tomorrow.</h2>
-
-			<p>
-				Rooted Fire Atelier is currently developing visual prototype packages for its first
-				capsule. The project is open to conversations with makers, ateliers, pattern cutters,
-				collaborators, and creative partners interested in helping story-born fashion become tangible.
-			</p>
-		</section>
-
-		<section id="contact" class="section contact">
-			<p class="eyebrow">Contact</p>
-
-			<h2>Collaboration inquiries are welcome.</h2>
-
-			<p>For atelier, prototype, editorial, or collaboration inquiries:</p>
-
-			<p class="coming-soon">Contact email coming soon.</p>
-		</section>
-	</main>
-
-	<Footer />
-</body>
-```
-
+	}
+</style>
+		</main>
+		<Footer />
+	</body>
 </html>
+
