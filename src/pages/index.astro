@@ -44,7 +44,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		and love becomes something wearable.
 	</p>
 
-	<a href="#" class="book-link">Amazon link coming soon</a>
+	<a href="https://www.amazon.com/dp/B0H26GW6R1" class="book-link" target="_blank" rel="noopener noreferrer">Read the book on Amazon</a>
 </section>
 	<section class="intro">
 		<p>
@@ -313,6 +313,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			min-height: auto;
 			padding: 4rem 0;
 		}
+.book-link {
+	display: inline-flex;
+	margin-top: 1.2rem;
+	padding: 0.9rem 1.2rem;
+	border: 1px solid rgba(180, 32, 45, 0.75);
+	border-radius: 999px;
+	background: rgba(180, 32, 45, 0.18);
+	color: #fff7ed;
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+.book-link:hover {
+	background: #b4202d;
+	color: #fff7ed;
+}
 	}
 </style>
 		</main>
