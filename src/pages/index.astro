@@ -366,16 +366,75 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	background: #b4202d;
 	color: #fff7ed;
 }
-	@media (max-width: 700px) {
-		main {
-			padding-inline: 1rem;
-		}
-
-		.hero {
-			min-height: auto;
-			padding: 4rem 0;
-		}
+@media (max-width: 700px) {
+	main {
+		padding-inline: 1rem;
 	}
+
+	.hero {
+		min-height: auto;
+		padding: 3rem 0 3.5rem;
+	}
+
+	.hero-logo {
+		width: min(300px, 88vw);
+		margin-bottom: 1.5rem;
+	}
+
+	h1 {
+		font-size: clamp(3rem, 18vw, 4.5rem);
+		line-height: 0.95;
+		letter-spacing: -0.045em;
+	}
+
+	h2 {
+		font-size: clamp(2rem, 12vw, 3rem);
+		line-height: 1.05;
+	}
+
+	.hero-copy {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	.hero-actions {
+		width: 100%;
+	}
+
+	.hero-actions a,
+	.contact a,
+	.book-link {
+		width: 100%;
+		text-align: center;
+	}
+
+	.intro {
+		padding: 3rem 0 1.5rem;
+	}
+
+	.intro p {
+		font-size: 1.25rem;
+		line-height: 1.55;
+	}
+
+	.section {
+		padding: 3rem 0;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	article {
+		padding: 1rem;
+	}
+
+	.piece-image {
+		aspect-ratio: 4 / 5;
+		border-radius: 0.85rem;
+	}
+}
 </style>
 		</main>
 		<Footer />
